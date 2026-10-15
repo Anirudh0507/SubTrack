@@ -1,0 +1,577 @@
+
+.dashboard-shell {
+  min-height: 100vh;
+  background: #080b14;
+  color: #f8fafc;
+}
+
+.dashboard-header {
+  min-height: 76px;
+  padding: 0 6%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+  border-bottom: 1px solid #1e293b;
+  background: #0d1220;
+}
+
+.dashboard-brand {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  font-size: 22px;
+  font-weight: 800;
+  letter-spacing: -0.6px;
+}
+
+.dashboard-brand .brand-icon {
+  margin: 0;
+}
+
+.profile-actions {
+  display: flex;
+  align-items: center;
+  gap: 18px;
+}
+
+.welcome-user {
+  color: #cbd5e1;
+  font-size: 14px;
+}
+
+.logout-button,
+.cancel-button,
+.edit-button,
+.delete-button,
+.close-button {
+  padding: 9px 13px;
+  border: 1px solid #334155;
+  border-radius: 8px;
+  background: transparent;
+  color: #cbd5e1;
+  font: inherit;
+  font-size: 13px;
+  cursor: pointer;
+}
+
+.logout-button:hover,
+.cancel-button:hover,
+.edit-button:hover {
+  background: #1e293b;
+}
+
+.dashboard-content {
+  width: min(1200px, 88%);
+  margin: 0 auto;
+  padding: 48px 0 64px;
+}
+
+.dashboard-heading {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 24px;
+  margin-bottom: 32px;
+}
+
+.dashboard-eyebrow {
+  margin: 0 0 10px;
+  color: #a5b4fc;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 1.5px;
+}
+
+.dashboard-heading h1 {
+  margin: 0;
+  font-size: clamp(27px, 4vw, 36px);
+  letter-spacing: -1.2px;
+}
+
+.dashboard-description {
+  margin: 10px 0 0;
+  color: #94a3b8;
+  font-size: 14px;
+  line-height: 1.7;
+}
+
+.add-button {
+  padding: 12px 17px;
+  border: 0;
+  border-radius: 9px;
+  background: #6366f1;
+  color: #fff;
+  font: inherit;
+  font-size: 13px;
+  font-weight: 700;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+.add-button:hover {
+  background: #4f46e5;
+}
+
+.add-button:disabled {
+  opacity: 0.6;
+  cursor: wait;
+}
+
+.dashboard-message {
+  margin: 0 0 24px;
+  padding: 13px 15px;
+  border: 1px solid #334155;
+  border-radius: 9px;
+  background: #111827;
+  color: #cbd5e1;
+  font-size: 13px;
+  overflow-wrap: anywhere;
+}
+
+.summary-grid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 18px;
+  margin-bottom: 48px;
+}
+
+.summary-card {
+  min-width: 0;
+  padding: 23px;
+  border: 1px solid #263247;
+  border-radius: 15px;
+  background: #101727;
+}
+
+.summary-card p {
+  margin: 0 0 19px;
+  color: #94a3b8;
+  font-size: 13px;
+}
+
+.summary-card h2 {
+  margin: 0 0 12px;
+  font-size: clamp(21px, 2.5vw, 29px);
+  letter-spacing: -0.8px;
+  overflow-wrap: anywhere;
+}
+
+.summary-card span {
+  color: #64748b;
+  font-size: 11px;
+}
+
+.subscriptions-section {
+  margin-top: 20px;
+}
+
+.section-heading {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+  margin-bottom: 22px;
+}
+
+.section-heading h2,
+.subscription-form-card h2 {
+  margin: 0;
+  font-size: 21px;
+  letter-spacing: -0.5px;
+}
+
+.section-heading p {
+  margin: 8px 0 0;
+  color: #94a3b8;
+  font-size: 13px;
+}
+
+.subscription-count {
+  padding: 7px 11px;
+  border: 1px solid #334155;
+  border-radius: 20px;
+  color: #cbd5e1;
+  font-size: 12px;
+  white-space: nowrap;
+}
+
+.subscription-list {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.subscription-row {
+  display: flex;
+  align-items: center;
+  gap: 18px;
+  padding: 20px;
+  border: 1px solid #263247;
+  border-radius: 14px;
+  background: #101727;
+}
+
+.service-icon,
+.empty-icon {
+  flex-shrink: 0;
+  display: grid;
+  place-items: center;
+  width: 48px;
+  height: 48px;
+  border-radius: 13px;
+  background: #25274d;
+  color: #c7d2fe;
+  font-size: 20px;
+  font-weight: 800;
+}
+
+.service-details {
+  flex: 1;
+  min-width: 0;
+}
+
+.service-details h3 {
+  margin: 0 0 6px;
+  font-size: 15px;
+  overflow-wrap: anywhere;
+}
+
+.service-details p,
+.service-details span {
+  display: block;
+  margin: 0 0 5px;
+  color: #94a3b8;
+  font-size: 12px;
+}
+
+.service-details span {
+  color: #64748b;
+}
+
+.service-price {
+  min-width: 105px;
+  text-align: right;
+}
+
+.service-price strong {
+  display: block;
+  margin-bottom: 5px;
+  font-size: 15px;
+}
+
+.service-price span {
+  color: #94a3b8;
+  font-size: 11px;
+}
+
+.service-actions {
+  display: flex;
+  gap: 8px;
+}
+
+.delete-button {
+  border-color: #713f46;
+  color: #fca5a5;
+}
+
+.delete-button:hover {
+  background: #3f1720;
+}
+
+.empty-state {
+  padding: 50px 20px;
+  border: 1px dashed #334155;
+  border-radius: 15px;
+  text-align: center;
+  background: #0d1321;
+}
+
+.empty-icon {
+  margin: 0 auto 20px;
+  font-size: 26px;
+}
+
+.empty-state h3 {
+  margin: 0 0 10px;
+  font-size: 18px;
+}
+
+.empty-state p {
+  margin: 0 0 24px;
+  color: #94a3b8;
+  font-size: 13px;
+  line-height: 1.7;
+}
+
+.subscription-form-card {
+  margin: 0 0 42px;
+  padding: 26px;
+  border: 1px solid #334155;
+  border-radius: 15px;
+  background: #101727;
+}
+
+.form-heading {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  margin-bottom: 24px;
+}
+
+.close-button {
+  padding: 4px 10px;
+  font-size: 24px;
+}
+
+.subscription-form {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 20px;
+}
+
+.subscription-form label {
+  display: flex;
+  flex-direction: column;
+  gap: 9px;
+  color: #cbd5e1;
+  font-size: 13px;
+  font-weight: 600;
+}
+
+.subscription-form input,
+.subscription-form select {
+  box-sizing: border-box;
+  width: 100%;
+  min-width: 0;
+  padding: 12px 13px;
+  border: 1px solid #334155;
+  border-radius: 9px;
+  outline: none;
+  background: #0b1220;
+  color: #f8fafc;
+  font: inherit;
+}
+
+.subscription-form input:focus,
+.subscription-form select:focus {
+  border-color: #818cf8;
+  box-shadow: 0 0 0 3px rgba(99, 102, 241, 0.12);
+}
+
+.form-actions {
+  grid-column: 1 / -1;
+  display: flex;
+  justify-content: flex-end;
+  gap: 12px;
+  margin-top: 6px;
+}
+
+@media (max-width: 1000px) {
+  .summary-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .subscription-row {
+    flex-wrap: wrap;
+  }
+
+  .service-details {
+    flex-basis: calc(100% - 75px);
+  }
+
+  .service-price {
+    margin-left: 66px;
+    text-align: left;
+  }
+
+  .service-actions {
+    margin-left: auto;
+  }
+}
+
+@media (max-width: 600px) {
+  .dashboard-header {
+    padding: 15px 5%;
+  }
+
+  .welcome-user {
+    display: none;
+  }
+
+  .dashboard-content {
+    width: 90%;
+    padding-top: 32px;
+  }
+
+  .dashboard-heading {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+
+  .summary-grid {
+    gap: 10px;
+  }
+
+  .summary-card {
+    padding: 16px;
+  }
+
+  .subscription-row {
+    gap: 12px;
+    padding: 15px;
+  }
+
+  .service-price {
+    margin-left: 60px;
+  }
+
+  .service-actions {
+    width: 100%;
+    margin-left: 60px;
+  }
+
+  .subscription-form-card {
+    padding: 18px;
+  }
+
+  .subscription-form {
+    grid-template-columns: 1fr;
+  }
+
+  .form-actions {
+    grid-column: auto;
+  }
+}
+.inactive-badge {
+  display: inline-block;
+  margin-left: 9px;
+  padding: 4px 7px;
+  border-radius: 5px;
+  background: #3f2930;
+  color: #fca5a5;
+  font-size: 10px;
+  font-weight: 600;
+  vertical-align: middle;
+}
+
+.renewals-section {
+  margin: 0 0 48px;
+}
+
+.renewals-list {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 12px;
+}
+
+.renewal-card {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  min-width: 0;
+  padding: 18px;
+  border: 1px solid #263247;
+  border-radius: 13px;
+  background: #101727;
+}
+
+.renewal-details {
+  flex: 1;
+  min-width: 0;
+}
+
+.renewal-details h3 {
+  margin: 0 0 7px;
+  font-size: 14px;
+  overflow-wrap: anywhere;
+}
+
+.renewal-details p {
+  margin: 0 0 6px;
+  color: #94a3b8;
+  font-size: 12px;
+}
+
+.renewal-details span {
+  color: #fbbf24;
+  font-size: 12px;
+}
+
+.renewal-amount {
+  font-size: 14px;
+  font-weight: 700;
+  white-space: nowrap;
+}
+
+.renewals-empty {
+  padding: 24px;
+  border: 1px dashed #334155;
+  border-radius: 13px;
+  background: #0d1321;
+  color: #94a3b8;
+  text-align: center;
+  font-size: 13px;
+}
+
+@media (max-width: 700px) {
+  .renewals-list {
+    grid-template-columns: 1fr;
+  }
+
+  .renewal-card {
+    padding: 14px;
+  }
+}
+
+
+/* Subscription Search and Filters */
+.subscription-filters {
+  display: grid;
+  grid-template-columns: minmax(200px, 2fr) repeat(3, minmax(140px, 1fr));
+  gap: 12px;
+  margin: 20px 0;
+  width: 100%;
+}
+
+.subscription-filters input,
+.subscription-filters select {
+  width: 100%;
+  min-width: 0;
+  padding: 12px 14px;
+  border: 1px solid #343746;
+  border-radius: 10px;
+  background: #171923;
+  color: #f3f4f6;
+  font: inherit;
+  outline: none;
+  box-sizing: border-box;
+  transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.subscription-filters input::placeholder {
+  color: #9296a5;
+}
+
+.subscription-filters input:focus,
+.subscription-filters select:focus {
+  border-color: #818cf8;
+  box-shadow: 0 0 0 3px rgba(129, 140, 248, 0.15);
+}
+
+.subscription-filters select {
+  cursor: pointer;
+}
+
+@media (max-width: 900px) {
+  .subscription-filters {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 520px) {
+  .subscription-filters {
+    grid-template-columns: 1fr;
+  }
+}

@@ -1,0 +1,29 @@
+﻿# Frontend dependencies and build output
+frontend/node_modules/
+frontend/dist/
+
+# Environment files and secrets
+.env
+.env.*
+!.env.example
+frontend/.env
+frontend/.env.*
+!frontend/.env.example
+backend/.env
+backend/.env.*
+!backend/.env.example
+
+# Backend build output
+backend/target/
+
+# Local logs
+*.log
+backend/startup-log
+backend/startup-log.txt
+
+# IDE and operating system
+.vscode/
+.idea/
+*.iml
+.DS_Store
+Thumbs.db
